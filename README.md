@@ -23,7 +23,8 @@ INSERT INTO FamousVilla VALUES
 (6, 'Kudelův rodinný dům', 'PhDr. Josef Kudela', 'Jan Víšek', 1926, 1927, 'funkcionalismus', 'Havlíčkova 36, čp. 145, Brno 1-Stránice'),
 (7, 'Löw-Beerova vila', 'Moritz Fuhrmann', 'Rudolf Baumfeld', 1903, 1904, 'secese', 'Drobného 22, čp. 297, Brno 4-Černá Pole'),
 (8, 'Rodinný dům Herminy Weiglové', 'Hermine Weiglová', 'Ernst Wiesner', 1934, 1934, 'funkcionalismus', 'Kalvodova 2, čp. 1210, Brno 1-Pisárky'),
-(9, 'Vila Tugendhat', 'Grete a Fritz Tugendhatovi', 'Ludwig Mies van der Rohe', 1928, 1930, 'funkcionalismus', 'Černopolní 45, čp. 620, Brno 4-Černá Pole');```
+(9, 'Vila Tugendhat', 'Grete a Fritz Tugendhatovi', 'Ludwig Mies van der Rohe', 1928, 1930, 'funkcionalismus', 'Černopolní 45, čp. 620, Brno 4-Černá Pole');
+```
 
 
 ## zadání
