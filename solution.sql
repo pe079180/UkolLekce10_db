@@ -21,38 +21,36 @@ INSERT INTO FamousVilla VALUES
 (8, 'Rodinný dům Herminy Weiglové', 'Hermine Weiglová', 'Ernst Wiesner', 1934, 1934, 'funkcionalismus', 'Kalvodova 2, čp. 1210, Brno 1-Pisárky'),
 (9, 'Vila Tugendhat', 'Grete a Fritz Tugendhatovi', 'Ludwig Mies van der Rohe', 1928, 1930, 'funkcionalismus', 'Černopolní 45, čp. 620, Brno 4-Černá Pole');
 
-select * from FamousVilla;
+SELECT * FROM FamousVilla;
 
 /*task 1 Vyberte jména všech vil a jejich adresy, takových které nebyly postaveny ve funkcionalistickém stylu a jejich stavba trvala déle, než rok*/
 
-select t.name, t.address from FamousVilla t
-where t.architecturalStyle <> 'funkcionalismus'
-and constructionCompleted<>constructionStarted;
+SELECT name, address FROM FamousVilla 
+WHERE architecturalStyle <> 'funkcionalismus'
+AND constructionCompleted<>constructionStarted;
 
 /*task 2 vyberte jména všech vil, které stojí v Pisárkách*/
-select t.name from FamousVilla t
-where t.address like '%Pisárky%';
+SELECT name FROM FamousVilla 
+WHERE address LIKE '%Pisárky%';
 
 /*3.) Vložte do tabulky dvě nové vily*/
 INSERT INTO FamousVilla (
   id, name, originalOwner, architect, constructionStarted, constructionCompleted, architecturalStyle, address) VALUES
-(10, 'Neznámá vila', 'Miroslav Vlastník', 'Karel Architekt', 1933, 1934, 'funkcionalismus', 'Březová 23, čp. 334, Ostrava Přívoz');
-INSERT INTO FamousVilla (
-  id, name, originalOwner, architect, constructionStarted, constructionCompleted, architecturalStyle, address) VALUES
+(10, 'Neznámá vila', 'Miroslav Vlastník', 'Karel Architekt', 1933, 1934, 'funkcionalismus', 'Březová 23, čp. 334, Ostrava Přívoz'),
 (11, 'Známá vila', 'Miroslav Známý', 'Miloslav Bek', 1913, 1913, 'funkcionalismus', 'Sadová 23, čp. 338, Bohumín');
-select t.* from FamousVilla t where id>9;
+SELECT * FROM FamousVilla WHERE id>9;
 
 /*4.) U Löw-Beerovy vily aktualizujte architekta na: Norbert Schlesinger a rok dokončení na: 1935*/
-update FamousVilla 
-set  architect='Norbert Schlesinger',
+UPDATE FamousVilla 
+SET  architect='Norbert Schlesinger',
      constructionCompleted = 1935
-where name='Löw-Beerova vila';
-select t.* from FamousVilla t where name='Löw-Beerova vila';
+WHERE name='Löw-Beerova vila';
+SELECT t.* FROM FamousVilla t WHERE name='Löw-Beerova vila';
 
 /*5.) Smažte z tabulky všechny vily postavené puristickém nebo secesním stylu*/
-delete from FamousVilla 
-where architecturalStyle in ('purismus','secese');
-select t.* from FamousVilla t;
+DELETE FROM FamousVilla 
+WHERE architecturalStyle in ('purismus','secese');
+SELECT * FROM FamousVilla;
 
 /*6.) Vložte do tabulky novou vilu, která je zatím jen rozestavěná, tak o ní víme zatím jen to, že se začala stavět v letošním roce, jejím autorem je Richard Načrtl, postavena bude ve stylu moderny a bude na adrese "Karlovská 624, Dolní Kounice"*/
 
@@ -60,7 +58,7 @@ INSERT INTO FamousVilla (id, architect, constructionStarted, architecturalStyle,
 VALUES
  (12, 'Richard Načrtl', 2022,'moderna', 'Karlovská 624, Dolní Kounice');
 
-select t.* from FamousVilla t where t.id=12;
+SELECT * FROM FamousVilla WHERE id=12;
 
 
 
